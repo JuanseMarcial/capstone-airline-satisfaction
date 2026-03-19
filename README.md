@@ -18,7 +18,9 @@ This thesis develops an integrated analytical framework that combines psychometr
 ├── notebooks/
 │   └── JuanseMarcial_FinalThesis_Code_v2.ipynb    # Full analysis pipeline
 ├── thesis/
-│   └── FinalSubmission_JuanseMarcial_Draft7.docx   # Final thesis document
+│   └── FinalSubmission_JuanseMarcial_Draft8.docx   # Final thesis document
+├── data/
+│   └── airline_passenger_satisfaction.csv           # Dataset (130K rows)
 ├── figures/
 │   ├── cell_9_img_0.png     # Figure 1: Likert distributions + correlation heatmap
 │   ├── cell_10_img_1.png    # Figure 2: Departure delay + flight distance distributions
