@@ -7,7 +7,7 @@
 
 ## Abstract
 
-This thesis develops an integrated analytical framework that combines psychometric measurement theory with machine learning to diagnose and prioritise airline service quality improvements. The pipeline applies Item Response Theory (via single-factor Exploratory Factor Analysis as a proxy for the Graded Response Model) to extract a continuous latent satisfaction score from 14 Likert-scale survey items. K-Means clustering (k=4, PCA-validated) segments passengers into interpretable archetypes along three dimensions: latent satisfaction, departure delay, and flight distance. A Random Forest classifier (91.58% test accuracy, 5-fold CV: 91.94%) predicts binary satisfaction, and SHAP (TreeExplainer) decomposes feature-level driver importance. The central methodological contribution is the **Strategic Priority Matrix**, a novel two-dimensional diagnostic tool that plots each service dimension according to its psychometric sensor quality (factor loading) on the horizontal axis and its predictive driver impact (mean absolute SHAP value) on the vertical axis, producing four actionable quadrants: Critical Priority, Hidden Drivers, Hygiene Factors, and Low Priority.
+This thesis develops an integrated analytical framework that combines psychometric measurement theory with machine learning to diagnose and prioritise airline service quality improvements. The pipeline applies Item Response Theory (via single-factor Exploratory Factor Analysis as a proxy for the Graded Response Model) to extract a continuous latent satisfaction score from 14 Likert-scale survey items. K-Means clustering (k=4, PCA-validated) segments passengers into interpretable archetypes along three dimensions: latent satisfaction, departure delay, and flight distance. A Random Forest classifier (91.58% test accuracy, 5-fold CV: 91.46%) predicts binary satisfaction, and SHAP (TreeExplainer) decomposes feature-level driver importance. The central methodological contribution is the **Strategic Priority Matrix**, a novel two-dimensional diagnostic tool that plots each service dimension according to its psychometric sensor quality (factor loading) on the horizontal axis and its predictive driver impact (mean absolute SHAP value) on the vertical axis, producing four actionable quadrants: Critical Priority, Hidden Drivers, Hygiene Factors, and Low Priority.
 
 ## Repository Structure
 
@@ -40,7 +40,7 @@ The analysis follows a five-stage pipeline:
 
 2. **Customer Segmentation (K-Means):** Passengers are clustered on latent satisfaction, departure delay, and flight distance, producing four interpretable archetypes validated via PCA projection and silhouette analysis (s = 0.406).
 
-3. **Predictive Modelling (Random Forest):** A 100-tree ensemble (max_depth=12) predicts binary satisfaction with 91.58% accuracy on a held-out test set (N=5,000), confirmed by 5-fold cross-validation (91.94% +/- 0.20%).
+3. **Predictive Modelling (Random Forest):** A 100-tree ensemble (max_depth=12) predicts binary satisfaction with 91.58% accuracy on a held-out test set (N=5,000), confirmed by 5-fold cross-validation (91.46% +/- 0.34%).
 
 4. **Feature Attribution (SHAP):** TreeExplainer decomposes predictions into per-feature contributions, identifying online boarding, inflight wifi, and leg room as the top three satisfaction drivers.
 
